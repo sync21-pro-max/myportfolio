@@ -415,6 +415,95 @@ p {
 
 }
 
+/* RECOMMENDATION CARD CONTENT */
+
+.recommendation-card {
+  /* Each slide is 6× the carousel width because the slider is 600% wide;
+     constrain the card to exactly one viewport (1/6 of the slide) so the
+     content lines up with the visible carousel area. */
+  width: calc(100% / 6);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.recommendation-content {
+  background: #efe3d3;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid #e3d1bf;
+  max-width: 760px;
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommender-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.recommender-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d9c3aa;
+  flex-shrink: 0;
+}
+
+.recommender-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommender-name {
+  font-size: 1.25rem;
+  color: #3e3228;
+  margin: 0;
+}
+
+.recommender-meta {
+  font-size: 0.85rem;
+  color: #9b7b5a;
+  margin-top: 4px;
+}
+
+.recommendation-text {
+  font-size: 1.02rem;
+  font-style: italic;
+  color: #5b4636;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+
+  .recommendation-content {
+    padding: 28px;
+    min-height: 380px;
+  }
+
+  .recommender-avatar {
+    width: 54px;
+    height: 54px;
+  }
+
+  .recommender-name {
+    font-size: 1.1rem;
+  }
+
+  .recommendation-text {
+    font-size: 0.95rem;
+  }
+
+}
+
 /* CONTACT */
 
 .contact {
