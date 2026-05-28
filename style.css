@@ -336,6 +336,50 @@ p {
   background: #e7d6c4;
 }
 
+/* SERVICES */
+
+.services {
+  padding: 120px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #efe3d3;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid #e3d1bf;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c9b39a;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: #3e3228;
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.service-card p {
+  font-size: 0.98rem;
+}
+
 /* RECOMMENDATION CAROUSEL */
 
 .recommendation-carousel {
@@ -540,6 +584,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .hero h1 {
     font-size: 3.5rem;
   }
@@ -559,6 +607,14 @@ p {
 
   .hero-image {
     max-width: 280px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
 }
